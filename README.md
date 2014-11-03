@@ -1,4 +1,4 @@
 game-of-the-generals
 ====================
 
-a board game made in python
+a classic filipino board game made in python
