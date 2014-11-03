@@ -245,15 +245,5 @@ class Game(object):
         print self.record_squares[54:63]
         print self.record_squares[63:72]
 
-        print 'A' + ''.join(self.squares[0:9])
-        print 'B' + ''.join(self.squares[9:18])
-        print 'C' + ''.join(self.squares[18:27])
-        print 'D' + ''.join(self.squares[27:36])
-        print 'E' + ''.join(self.squares[36:45])
-        print 'F' + ''.join(self.squares[45:54])
-        print 'G' + ''.join(self.squares[54:63])
-        print 'H' + ''.join(self.squares[63:72])
-        print '   1    2    3    4    5    6    7    8    9'
-
 
 Game()
