@@ -27,6 +27,7 @@ class Game(object):
             self.squares.append(i)
             self.record_squares.append(i)
 
+        self.update()
         self.setup()
 
     def setup(self):
@@ -54,7 +55,7 @@ class Game(object):
             else:
                 print 'Choice not available'
                 self.update()
-
+                
         self.comp_setup()
 
     def comp_setup(self):
@@ -89,7 +90,7 @@ class Game(object):
                     if conv_choose in [0, 9, 18, 27, 36, 45, 54, 63]:
                         addends = [9, -18, 10]
                     elif conv_choose in [8, 17, 26, 35, 44, 53, 62, 71]:
-                        addends = [9, -18, -2]
+                        addends = [9, -18, 8]
 
                     for i in range(len(addends)):
                         a += addends[i]
@@ -107,7 +108,7 @@ class Game(object):
                         if self.squares[conv_move_to] == '[---]':
                             self.squares[conv_move_to] = self.squares[conv_choose]
                             self.squares[conv_choose] = '[---]'
-                            if '[FLG}' in self.squares[0:9]:
+                            if '[FLG]' in self.squares[0:9]:
                                 print 'Winner: You'
                                 exit(1)
                             else:
@@ -236,14 +237,16 @@ class Game(object):
         self.update()
 
     def update(self):
-        print self.record_squares[0:9]
-        print self.record_squares[9:18]
-        print self.record_squares[18:27]
-        print self.record_squares[27:36]
-        print self.record_squares[36:45]
-        print self.record_squares[45:54]
-        print self.record_squares[54:63]
-        print self.record_squares[63:72]
+	
+        print 'A' + ''.join(self.squares[0:9])
+        print 'B' + ''.join(self.squares[9:18])
+        print 'C' + ''.join(self.squares[18:27])
+        print 'D' + ''.join(self.squares[27:36])
+        print 'E' + ''.join(self.squares[36:45])
+        print 'F' + ''.join(self.squares[45:54])
+        print 'G' + ''.join(self.squares[54:63])
+        print 'H' + ''.join(self.squares[63:72])
+        print '   1    2    3    4    5    6    7    8    9'
 
 
 Game()
